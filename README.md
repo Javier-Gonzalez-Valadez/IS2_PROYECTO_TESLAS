@@ -10,3 +10,8 @@
 - Jaime Yair Badillo Mendoza yairbadillo71@aragon.unam.mx - Team Scrum:
 - Javier Gonzalez Valadez javiergonzalez01@aragon.unam.mx - Team Scrum:
 - Jose Eduardo Rosales Lázaro eduardolazaro05@aragon.unam.mx - Team Scrum:
+
+
+### Linea para ejecutar la aplicacion
+DEBUG=is2-proyecto-teslas:* npm start
+
