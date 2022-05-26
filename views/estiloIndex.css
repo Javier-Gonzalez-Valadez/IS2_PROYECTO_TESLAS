@@ -1,0 +1,7 @@
+.first{
+    background-image: url('/Recursos/BG1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 850px;
+    height: 850px;
+}
