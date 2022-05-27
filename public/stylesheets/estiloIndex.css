@@ -1,0 +1,49 @@
+.first{
+    background-image: url('/Recursos/BG1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 850px;
+    height: 850px;
+}
+
+
+.border{
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(128, 30, 255, 0.3);
+}
+
+.row{
+    margin: 40px 80px;
+    text-align: center;
+}
+
+
+
+ul{
+    text-align: center;
+    display: inline-block;
+}
+
+.texto{
+    text-align: center;
+    color: #fff;
+}
+
+.contenedor_flex{
+    display: flex;
+}
+
+.rowDocker{
+    margin: 0px;
+    padding: 8px;
+}
+
+
+.second{
+    background-image: url('/Recursos/BG10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 850px;
+    height: 850px;
+}
