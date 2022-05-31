@@ -21,7 +21,7 @@ body{
     background-position: center;
     border-radius: 5%;
 }
- 
+
 .javier{
     background-image: url('https://www.fightersgeneration.com/nz8/char/metal-slug-defense/iori-yagami-msd-stance.gif');
 
@@ -34,6 +34,10 @@ body{
 .erik{
     background-image: url('/Recursos/fotos-scrum-team/Erik.jpeg');
 
+}
+
+.jose{
+  background-image: url('/Recursos/fotos-scrum-team/Jose.jpg');
 }
 
 .main{
