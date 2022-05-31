@@ -1,0 +1,45 @@
+body{
+    background-image: url('/Recursos/BG13.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto{
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    padding-top: 30px;
+}
+
+nav{
+    backdrop-filter: blur(5px);
+    background-color: rgba(19, 132, 252, 0.005);
+    z-index: 1;
+}
+
+#navbarNavDropdown{
+    padding-left: 15%;
+}
+
+.segundo{
+    background-color: rgba(0, 1, 75, 0.92);
+    height: 6.5em;
+}
+
+.tercer{
+
+
+}
+
+.col-lg-4{
+
+}
+
+.footer{
+    background-color: rgba(0, 0, 22, 0.92);
+    margin-bottom: -20px;
+    padding-bottom: 20px;
+}

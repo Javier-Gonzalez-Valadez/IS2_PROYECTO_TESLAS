@@ -2,9 +2,39 @@
     <div class="first vh-100">
         
         <div class="container">
+           
             <h1 style="color: #fff; padding: 25px;" > IS2_PROYECTO_TESLA - Tecnologías y Metodologías </h1>
-            <hr style="height: 1px;color: #fff"> 
-            <div class="row  introduccion texto" style="color: #fff;margin-top:50px; margin-right:80px; margin-left:80px;outline:3px solid purple;"> 
+            <hr style="color: aqua;">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #fff;">API Rest</a> 
+                        </li> 
+                        <li class="nav-item texto">
+                            <a class="nav-link" style="color: #fff;" href="http://127.0.0.1:3000/equipo">Equipo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  style="color: #fff;" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Docker
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="http://127.0.0.1:3000/docker">Introduccion a Docker</a>
+                                <a class="dropdown-item" href="" >Imagenes Docker</a>
+                                <a class="dropdown-item" href="">Contenedores</a>
+                                <a class="dropdown-item" href="">Archivo Dockerfile</a>
+                                <a class="dropdown-item" href="">Directivas Dockerfile</a>
+                                <a class="dropdown-item" href="">Ciclo de vida de los Contenedores</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="row  introduccion texto" style="color: #fff;margin-top:0; margin-right:80px; margin-left:80px;outline:3px solid purple;"> 
                 <div class="col-lg-8 border primer">
                     <h5>Proyecto - Metodología SCRUM e implementeacion de tecnologías de Desarrollo de 
                     Software. Desarrollo Web </h2>
@@ -32,16 +62,17 @@
                 <div class="col-lg-8 border texto">
                     <h5>¿Que es Docker y por qué usarlo?</h5>
                     <p>La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier máquina con Docker instalado, independientemente del sistema operativo que la máquina tenga por debajo.</p>
+                    <p>Ir a: </p>
                     <div class="row rowDocker">
                         <div class="col-lg-4 border rowDocker">
-                            <i class="fas fa-home" style="color: #fff;"></i><br>
+                            <a href="http://127.0.0.1:3000/docker" target="_blank"><i class="fas fa-home" style="color: #fff;"></i></a><br>
                             <ul class="ul">
-                                <li><a href="" target="_blank" class="">Introduccion a Docker</a></li>
+                                <li><a href="http://127.0.0.1:3000/docker" target="_blank" class="">Introduccion a Docker</a></li>
                                 <li><a href="" target="_blank" class="">Imagenes Docker</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4 border rowDocker">
-                            <i class="fas fa-database" style="color: #fff;"></i><br>
+                            <a href="" target="_blank"><i class="fas fa-database" style="color: #fff;"></i></a><br>
                             
                             <ul class="ul">
                                 <li><a href="" target="_blank" class="">Contenedores</a></li>
@@ -49,7 +80,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-4 border rowDocker">
-                            <i class="fas fa-gem" style="color:#fff;"></i>
+                            <a href="" target="_blank"><i class="fas fa-gem" style="color:#fff;"></i></a>
                             <ul class="ul">
                                 <li><a href="" target="_blank" class="">Directivas Dockerfile</a></li>
                                 <li><a href="" target="_blank" class="">Ciclo de vida de los Contenedores</a></li>
@@ -90,13 +121,44 @@
                         </div>
                         <div class="carousel-inner" style="border-radius: 5%;">
                             <div class="carousel-item active c1">
-                                
+                                <div class="infoCarousel">
+                                    <p class="texto">
+                                        Conoce a Tesla
+                                    </p>
+                                    <div class="imgC" >
+                                        <img src="/Recursos/TeamWork.jpg" style="width: 100%; height: 100%; border-radius: 5%;">
+                                    </div>
+                                    <div style="width: 100%;text-align: center;">
+                                        <a href="http://127.0.0.1:3000/equipo" class="btn btn-primary" style="text-align: center;" target="_blank">Ver</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="carousel-item c2" >
-                                
+                               <div class="infoCarousel">
+                                    <p class="texto">
+                                        Hablemos de Docker
+                                    </p>
+                                    <div class="imgC" >
+                                        <img src="/Recursos/HablemosDeDocker.jpg" style="width: 100%; height: 100%; border-radius: 5%;">
+                                    </div>
+                                    <div style="width: 100%;text-align: center;">
+                                        <a href="" class="btn btn-primary" style="text-align: center;" target="_blank">Ver</a>
+                                    </div>
+                                </div>
+                               
                             </div>
                             <div class="carousel-item c3">
-                                 
+                                 <div class="infoCarousel">
+                                    <p class="texto">
+                                        API Rest
+                                    </p>
+                                    <div class="imgC" >
+                                        <img src="/Recursos/APIRest.jpg" style="width: 100%; height: 100%; border-radius: 5%;">
+                                    </div>
+                                    <div style="width: 100%;text-align: center;">
+                                        <a href="" class="btn btn-primary" style="text-align: center;" target="_blank">Ver</a>
+                                    </div>
+                                </div>  
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
