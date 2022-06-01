@@ -4,12 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//conexion a la BD
+var mongoose = require ('mongoose');
+mongoose.connect('mongodb+srv://userTesla:tesla@cluster0.c1vqi.mongodb.net/automovil?retryWrites=true&w=majority'
+, {useNewUrlParser : true
+}).then(()=>{console.log('Conectado a Mondo DB - Equipo Tesla')})
+.catch(err => console.log(err));
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var equipoRouter = require('./routes/equipo');
 var dockerRouter = require('./routes/docker');
 var imagenesRouter = require('./routes/imagenes');
 var contenedoresRouter = require('./routes/contenedores');
+var autosRouter = require('./routes/autos');//controlador de rutas del EndPoint autos
+
 
 var app = express();
 
@@ -29,6 +39,8 @@ app.use('/equipo', equipoRouter);
 app.use('/docker', dockerRouter);
 app.use('/imagenes', imagenesRouter);
 app.use('/contenedores', contenedoresRouter);
+app.use('/autos',autosRouter);// /autosRouter va hacer  la APIREST y el controlador es autosRouter
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
