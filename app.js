@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var equipoRouter = require('./routes/equipo');
 var dockerRouter = require('./routes/docker');
+var imagenesRouter = require('./routes/imagenes');
+var contenedoresRouter = require('./routes/contenedores');
 
 var app = express();
 
@@ -25,6 +27,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/equipo', equipoRouter);
 app.use('/docker', dockerRouter);
+app.use('/imagenes', imagenesRouter);
+app.use('/contenedores', contenedoresRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
