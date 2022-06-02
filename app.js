@@ -19,6 +19,9 @@ var dockerRouter = require('./routes/docker');
 var imagenesRouter = require('./routes/imagenes');
 var contenedoresRouter = require('./routes/contenedores');
 var dockerfilesRouter = require('./routes/dockerfiles');
+var directivasdockerfileRouter = require('./routes/directivasdockerfile');
+var ciclovidaRouter = require('./routes/ciclovida');
+
 var autosRouter = require('./routes/autos');//controlador de rutas del EndPoint autos
 
 
@@ -41,6 +44,8 @@ app.use('/docker', dockerRouter);
 app.use('/imagenes', imagenesRouter);
 app.use('/contenedores', contenedoresRouter);
 app.use('/dockerfiles', dockerfilesRouter);
+app.use('/directivasdockerfile', directivasdockerfileRouter);
+app.use('/ciclovida', ciclovidaRouter);
 app.use('/autos',autosRouter);// /autosRouter va hacer  la APIREST y el controlador es autosRouter
 
 

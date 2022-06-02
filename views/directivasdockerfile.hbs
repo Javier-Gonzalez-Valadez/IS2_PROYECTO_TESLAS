@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="texto">Dockerfile</h1>
+    <h1 class="texto">Directivas del Dockerfile</h1>
 
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="http://127.0.0.1:3000"><i></i></a>
@@ -48,13 +48,42 @@
     <div class="one">
         <div class="container" style="margin:auto;width: 70%;">
             <div class="row">
-                <div class="col-lg-12 border texto">
-                    Para trabajar con Docker, hay que entender el Dockerfile, la imagen y el contenedor:
-                    <ol>
-                        <li>Un Dockerfile es un archivo de texto que contiene las directivas ordenadas, que el software necesita para construir una imagen determinada.</li>
-                        <li>Una imagen Docker es el sistema ejecutable autónomo configurado según las instrucciones del Dockerfile.</li>
-                        <li>Un contenedor ejecuta la imagen o, normalmente, muchas capas de imágenes. Una instancia es un contenedor Docker. Puede ejecutar varias instancias de la misma imagen de contenedor.</li>
-                    </ol>
+                <div class="col-lg-12 border textod">
+                    <dl>
+                    <dt>FROM</dt>
+                    <code>FROM  < nombre_de_la_imagen > </code>
+                    <dd>- La instrucción FROM inicializa una nueva etapa de construcción y establece la imagen base para las instrucciones posteriores. Como tal, un Dockerfile válido debe comenzar con una instrucción FROM. La imagen puede ser cualquier imagen válida - es especialmente fácil empezar sacando una imagen de los Repositorios Públicos de DockerHub</dd>
+                    <dt>RUN</dt>
+                    <code>RUN < comando ></code>
+                    <code>RUN ["ejcutable", "param1", "param2"] </code>
+                    <dd>- La instrucción RUN ejecutará cualquier comando en una nueva capa sobre la imagen actual y confirmará los resultados. La imagen confirmada resultante se utilizará para el siguiente paso en el Dockerfile.</dd>
+                    <dt>CMD</dt>
+                    <code>CMD ["ejcutable", "param1", "param2"] </code>
+                    <code>CMD ["param1", "param2"] </code>
+                    <code>CMD ejcutable param1 param2 </code>
+                    <dd>- Sólo puede haber una instrucción CMD en un Dockerfile. Si se incluye más de un CMD, sólo el último tendrá efecto. El propósito principal de un CMD es proporcionar valores por defecto para un contenedor en ejecución. Estos valores predeterminados pueden incluir un ejecutable, o pueden omitir el ejecutable, en cuyo caso debe especificar también una instrucción ENTRYPOINT.</dd>
+                    <dt>LABEL</dt>
+                    <code>LABEL < llave > = < valor > </code>
+                    <dd>- La instrucción LABEL añade metadatos a una imagen. Una LABEL es un par clave-valor. Para incluir espacios dentro de un valor de LABEL, utilice comillas y barras invertidas como lo haría en el análisis de la línea de comandos.</dd>
+
+                    <dt>EXPOSE</dt>
+                    <code>EXPOSE  puerto/protocolo </code>
+                    <dd>- La instrucción EXPOSE informa a Docker que el contenedor escucha en los puertos de red especificados en tiempo de ejecución. Puede especificar si el puerto escucha en TCP o UDP, y el valor predeterminado es TCP si no se especifica el protocolo.</dd>
+
+                    <dt>ENV</dt>
+                    <code>LABEL < llave > = < valor > </code>
+                    <dd>- La instrucción ENV establece la variable de entorno < llave > al valor < valor >. Este valor estará en el entorno para todas las instrucciones posteriores en la etapa de construcción y puede ser reemplazado en línea en muchos también. El valor será interpretado para otras variables de entorno.</dd>
+
+                    <dt>COPY</dt>
+                    <code>COPY [--chown=< usuario >:< grupo >] < origen > ... < destino ></code>
+                    <code>COPY [--chown=< usuario >:< grupo >] ["< origen >", ... "< destino >" ]</code>
+                    <dd>- La instrucción COPY copia nuevos archivos o directorios desde < origen > y los añade al sistema de archivos del contenedor en la ruta < destino >. Se pueden especificar múltiples recursos < origen > pero las rutas de los archivos y directorios se interpretarán como relativas al origen del contexto de la construcción.</dd>
+
+                    <dt>WORKDIR</dt>
+                    <code>WORKDIR /ruta/al/workdir </code>
+                    <dd>- La instrucción WORKDIR establece el directorio de trabajo para cualquier instrucción RUN, CMD, ENTRYPOINT, COPY y ADD que le siga en el Dockerfile. Si el WORKDIR no existe, se creará aunque no se utilice en ninguna instrucción Dockerfile posterior.</dd>
+
+                    </dl>
                 </div>
                 <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
                     <img src="/Recursos/docker-tutorial.webp" style="width: 40%;text-align: center; padding-top: 20px;">
