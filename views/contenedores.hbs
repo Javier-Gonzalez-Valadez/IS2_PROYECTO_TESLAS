@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="/stylesheets/docker.css" rel="stylesheet" type="text/css"> 
+    <link href="/stylesheets/docker.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6aaca85f05.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -44,17 +44,59 @@
             </ul>
         </div>
     </nav>
- 
+
     <div class="one">
         <div class="container" style="margin:auto;width: 70%;">
             <div class="row">
                 <div class="col-lg-12 border texto">
-                    Hoy en día existe una cantidad considerable de aplicaciones, mismas que en su tiempo fueron desarrolladas y puestas a prueba para su funcionamiento eficiente. Cuando se desarrolla software siempre existe la posibilidad de que se tengan complicaciones, ya sea en el ámbito de la construcción, distribución y ejecución del código. Docker viene a solucionar parte de estas complicaciones, hoy en día es una herramienta de gran ayuda es muy importante conocerlo.
-Docker es una plataforma abierta para desarrollar, enviar y ejecutar aplicaciones. Permite separar sus aplicaciones de su infraestructura para que se pueda entregar software rápidamente. 
-Actualmente al aprovechar su metodología para enviar, probar e implementar código de manera rápida se puede reducir significativamente el retraso entre escribir código y ejecutarlo en producción. A continuación, te mostraremos parte de lo que es Docker como sus distintos conceptos y algunos ejemplos de su implementación.
+                  Docker es un proyecto que se basa en la contenedorización. Los contenedores Docker son pequeños sistemas encapsulados e independientes (tienen su propio árbol de procesos, sus interfaces de red.) y se pueden limitar los recursos que se asignan a cada contenedor.
+                  Los contenedores Docker se ejecutan como un proceso, y consumen poca memoria. Están optimizados. El contenedor comparte el Kernel de la máquina host con otros contenedores.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="texto">¿Cómo funciona un contenedor docker?</h1>
+
+    <div class="one">
+        <div class="container" style="margin:auto;width: 70%;">
+            <div class="row">
+                <div class="col-lg-12 border texto">
+                  Un contenedor se inicia ejecutando una imagen. El archivo Dockerfile define una imagen, y por tanto cómo será el contenedor que se creará a partir de esa imagen. Por tanto, un contenedor es una instancia de una imagen.
+                  Y ese Dockerfile (que es un documento de texto) contiene todos los comandos que normalmente se ejecutan manualmente para construir una imagen para Docker. Docker puede leer las instrucciones del archivo Dockerfile y construir una imagen para Docker automáticamente.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="texto">Comandos Docker Container</h1>
+
+    <div class="one">
+        <div class="container" style="margin:auto;width: 70%;">
+            <div class="row">
+                <div class="col-lg-12 border texto">
+                  Podemos comprobar que el sistema muestra los contenedores en funcionamiento con:
                 </div>
                 <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
-                    <img src="/Recursos/docker-tutorial.webp" style="width: 40%;text-align: center; padding-top: 20px;">
+                    <img src="/Recursos/containerls.jpg" style="width: 30%;text-align: center; padding-top: 20px;">
+                </div>
+                <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
+                    <img src="/Recursos/container2.jpg" style="width: 80%;text-align: center; padding-top: 20px;">
+                </div>
+                <div class="col-lg-12 border texto">
+                  Se puede ver la lista de contenedores Docker en ejecución con el comando:
+                </div>
+                <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
+                  <img src="/Recursos/containerps.jpg" style="width: 30%;text-align: center; padding-top: 20px;">
+              </div>
+                <div class="col-lg-12 border texto">
+                  Para ver el estado de los contenedores:
+                </div>
+                <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
+                    <img src="/Recursos/stats1.jpg" style="width: 30%;text-align: center; padding-top: 20px;">
+                </div>
+                <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
+                    <img src="/Recursos/stats.jpg" style="width: 80%;text-align: center; padding-top: 20px;">
                 </div>
             </div>
         </div>
@@ -105,7 +147,7 @@ Actualmente al aprovechar su metodología para enviar, probar e implementar cód
 
 
 
-        
+
         <div class="row mx-5 flex" style="text-align: center; justify-content: center;margin: 30px 0;" >
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
@@ -150,7 +192,7 @@ Actualmente al aprovechar su metodología para enviar, probar e implementar cód
             <p>UNAM - FES ARAGÓN</p>
             <p>Equipo : TESLAS</p>
         </div>
-        
+
 
 
 
