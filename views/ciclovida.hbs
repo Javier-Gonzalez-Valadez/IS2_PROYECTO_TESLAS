@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="texto">Contenedores Docker</h1>
+    <h1 class="texto">Ciclo de vida de los Contenedores</h1>
 
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="http://127.0.0.1:3000"><i></i></a>
@@ -35,7 +35,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="/docker" >Introduccion a Docker</a>
-                                    <a class="dropdown-item" href="/imagenes" >Imagenes Docker</a>
+                                    <a class="dropdown-item" href="/contenedores">Contenedores</a>
                                     <a class="dropdown-item" href="">Archivo Dockerfile</a>
                                     <a class="dropdown-item" href="">Directivas Dockerfile</a>
                                     <a class="dropdown-item" href="">Ciclo de vida de los Contenedores</a>
@@ -48,10 +48,38 @@
     <div class="one">
         <div class="container" style="margin:auto;width: 70%;">
             <div class="row">
-                <div class="col-lg-12 border texto">
-                    Hoy en día existe una cantidad considerable de aplicaciones, mismas que en su tiempo fueron desarrolladas y puestas a prueba para su funcionamiento eficiente. Cuando se desarrolla software siempre existe la posibilidad de que se tengan complicaciones, ya sea en el ámbito de la construcción, distribución y ejecución del código. Docker viene a solucionar parte de estas complicaciones, hoy en día es una herramienta de gran ayuda es muy importante conocerlo.
-Docker es una plataforma abierta para desarrollar, enviar y ejecutar aplicaciones. Permite separar sus aplicaciones de su infraestructura para que se pueda entregar software rápidamente. 
-Actualmente al aprovechar su metodología para enviar, probar e implementar código de manera rápida se puede reducir significativamente el retraso entre escribir código y ejecutarlo en producción. A continuación, te mostraremos parte de lo que es Docker como sus distintos conceptos y algunos ejemplos de su implementación.
+                <div class="col-lg-12 border textod">
+                    Un contenedor no nace, crece se reproduce y muere, si no que a través de ciertos comandos, estos son desde creados hasta removidos. Algunos de estos comandos son:
+                    <dl>
+                    <dd></dd>
+                    <dd></dd>
+                    <dd>Obtener las imagenes de los repositorios de docker:</dd>
+                    <code>docker pull < imagen ></code>
+
+                    <dd>Por otro lado, si tenemos un archivo Dockerfile construiremos una imagen personalizada a traves de las directivas del archivo:</dd>
+                    <code>docker build < ruta del Dockerfile ></code>
+                    
+                    <dd>Ejecutar una imagen y ponerla en modo demonio (servicio):</dd>
+                    <code>docker run -it -d < nombre de la imagen ></code>
+                    
+                    <dd>Ejecutar el comando "bash" en el contenedor, de esta manera entrando al docker:</dd>
+                    <code>docker exec -it < id del contenedor > bash </code>
+                    
+                    <dd>Detener de manera adecuada un contenedor activo:</dd>   
+                    <code>docker stop < id del contenedor > </code>
+
+                    <dd>Detiene inmediatamente la ejecucion de el contenedor:</dd>
+                    <code>docker kill < id del contenedor > </code>
+
+                    <dd>Borra un contenedor detenido:</dd>
+                    <code>docker rm < id del contenedor > </code>
+
+                    <dd>Borra un contenedor del almacenamiento local:</dd>
+                    <code>docker rmi < id del contenedor > </code>
+
+
+                    </dl>
+
                 </div>
                 <div class="col-lg-12" style="text-align: center;margin-bottom: 40px;">
                     <img src="/Recursos/docker-tutorial.webp" style="width: 40%;text-align: center; padding-top: 20px;">
@@ -125,7 +153,7 @@ Actualmente al aprovechar su metodología para enviar, probar e implementar cód
                     <div class="card-body">
                         <h5 class="card-title">Directivas DockerFile</h5>
                         <p class="card-text">Conozca que son las Directivas DockerFile, para que se usan y cuales son sus caracteristicas...</p>
-                        <a href="/directivasdockerfile" class="btn btn-primary">Ver</a>
+                        <a href="directivasdockerfile" class="btn btn-primary">Ver</a>
                     </div>
                 </div>
             </div>
